@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>LeapVAD: A Leap in Autonomous Driving via Cognitive Perception and Dual-Process Thinking</title>
+  <link rel="icon" type="image/x-icon" href="static/images/leap.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <!-- <script defer src="static/js/fontawesome.all.min.js"></script> -->
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/dcd6d05807.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .title-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title.is-1.publication-title {
+      margin: 0;
+      position: relative;
+      display: inline-block;
+    }
+    .title-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    .title-original, .title-hover {
+      transition: opacity 1.2s ease;
+      text-align: center;
+    }
+    .title-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title.is-1.publication-title:hover .title-original {
+      opacity: 0;
+    }
+    .title.is-1.publication-title:hover .title-hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="title-container">
+              <img src="static/images/leap.png" alt="Leap Icon" style="width: 90px; margin-right: 30px;">
+              <h1 class="title is-1 publication-title">
+                <span class="title-original">
+                  LeapVAD: A Leap in Autonomous Driving via Cognitive Perception and Dual-Process Thinking               
+                </span>
+                <span class="title-hover" style="color: #ff7e5f;">
+                  LeapVAD
+                </span>
+              </h1>
+            </div>
+            <br>
+            <div class="is-size-4 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://april.zju.edu.cn/team/yukai-ma/" target="_blank">Yukai Ma</a><sup>2,1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/tiantian-wei-90328b262/" target="_blank">Tiantian Wei</a><sup>3,1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="" target="_blank">Naiting Zhong</a><sup>4,1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=OUtPkg0AAAAJ&hl=en" target="_blank">Jianbiao Mei</a><sup>2,1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=OUtPkg0AAAAJ&hl=en" target="_blank">Tao Hu</a><sup>5,1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://wenlc.cn/" target="_blank">Licheng Wen</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=xGuZsikAAAAJ&hl=zh-CN" target="_blank">Xuemeng Yang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=K0PpvLkAAAAJ" target="_blank">Botian Shi</a><sup>1,<i class="fa-regular fa-envelope fa-shake"></i></sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://april.zju.edu.cn/team/dr-yong-liu/" target="_blank">Yong Liu</a><sup>2,<i class="fa-regular fa-envelope fa-shake"></i></sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <br> 
+              <span class="author-block"><sup>1</sup>Shanghai Artificial Intelligence Laboratory</span>&ensp;
+              <span class="author-block"><sup>2</sup>Zhejiang University</span>&ensp;
+              <span class="author-block"><sup>3</sup>Technical University of Munich</span>&ensp;
+              <br>
+              <span class="author-block"><sup>4</sup>Tongji University</span>&ensp;
+              <span class="author-block"><sup>5</sup>University of Science and Technology of China</span>&ensp;
+              <!-- <span class="eql-cntrb"><br><sup><i class="fa-solid fa-scale-balanced fa-xs fa-shake"></i></sup>Equal contribution, <sup>&ensp;-->
+                <i class="fa-regular fa-envelope fa-shake"></i></sup>Corresponding author</span> 
+              <!-- <span class="eql-cntrb"><small></small></span> -->
+            </div>
+
+            <!-- Github link -->
+            <span class="link-block">
+              <a href="https://github.com/PJLab-ADG/LeapVAD" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span></a>
+            </span>
+
+            <!-- ArXiv abstract Link -->
+            <span class="link-block">
+              <a href="" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+            </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const title = document.querySelector('.publication-title');
+      const originalText = document.querySelector('.title-original');
+      const hoverText = document.querySelector('.title-hover');
+
+      title.addEventListener('mouseenter', function () {
+        originalText.style.animation = 'fadeOut 0.5s forwards';
+        hoverText.style.animation = 'fadeIn 0.5s forwards';
+      });
+
+      title.addEventListener('mouseleave', function () {
+        originalText.style.animation = 'fadeIn 0.5s forwards';
+        hoverText.style.animation = 'fadeOut 0.5s forwards';
+      });
+    });
+  </script>
+  <!-- Teaser video-->
+  <!-- <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <center>
+          <video poster="" id="tree" autoplay controls muted loop height="100%" width="80%">
+            <source src="static/videos/case1.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            Tease Video
+          </h2>
+      </div>
+    </div>
+  </section> -->
+  <!-- End teaser video -->
+
+
+  <!-- 视频显示 -->
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">LeapVAD in <a href="https://github.com/PJLab-ADG/DriveArena" target="_blank">DriveArena</a></h2>  
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on DriveLM dataset.  
+          </h2>   -->
+          </div>
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on Rank2Tell dataset.  
+          </h2>   -->
+          </div>
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on Rank2Tell dataset.  
+          </h2>   -->
+          </div>
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on Rank2Tell dataset.  
+          </h2>   -->
+          </div>
+
+          <!-- More video items go here -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+<!-- 视频显示 -->
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+        <h2 class="title">LeapVAD in <a href="https://github.com/carla-simulator/leaderboard" target="_blank">Carla</a></h2>  
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case1_carla.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on DriveLM dataset.  
+          </h2>   -->
+          </div>
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case2_carla.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on Rank2Tell dataset.  
+          </h2>   -->
+          </div>
+          <div class="item">
+            <center>
+              <video width="100%" controls>
+                <source src="static/videos/case3_carla.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </center>
+            <!-- <h2 class="subtitle has-text-centered">  
+            Annotation format and example of scene description generated by VLM on Rank2Tell dataset.  
+          </h2>   -->
+          </div>
+          <!-- More video items go here -->
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              <b>
+                Autonomous driving technology has made significant progress; however, data-driven methods continue to face challenges in complex scenarios due to their lack of reasoning ability. Knowledge-driven autopilot systems have evolved significantly, thanks to the recent popularization of visual language models. Therefore, we propose a novel data-driven framework named LeapVAD. Our method is designed to emulate the human attentional mechanism, selectively focusing on key traffic objects that influence driving decisions. LeapVAD simplifies environmental representation and reduces the complexity of decision-making by describing the attributes of these objects, such as appearance, motion, and risks. Furthermore, LeapVAD incorporates an innovative dual-process decision-making module that mimics the human learning process of driving. This model comprises a Analytic Process (System-II) that accumulates driving experience through logical reasoning without human intervention, and a Heuristic Process (System-I) that develops from this knowledge via fine-tuning and few-shot learning. LeapVAD also includes reflective mechanisms and a growing memory bank, enabling it to learn from past mistakes and continuously improve its performance in a closed-loop environment. We further trained a Scene Encoder network to generate scene tokens, providing a compact representation for the efficient retrieval of target driving experiences. We conducted experiments in two renowned self-driving simulators, Carla and DriveArena. Our method, trained with less data, outperforms other approaches that rely solely on camera input. Furthermore, extensive ablation studies highlight its continuous learning and migration capabilities.
+              </b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+
+
+  <!-- End paper abstract -->
+
+
+
+  <section class="section" id="Architecture">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+
+        <div class="column is-four-fifths">
+          <h2 class="title">LeapVAD Architecture</h2>
+          <div class="hero-body">
+            <center>
+              <embed type="image/png" src="static/images/brief_pipeline.jpg" width="100%" />
+            </center>
+            <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
+              The architecture of LeapVAD consists of two primary modules: scene understanding and dual-process decision-making. The scene understanding module analyzes multi-view or multi-frame images, identifying critical objects and generating scene a token. This token serves as a characteristic representation of the current scene. The dual-process decision-making module then uses this scene description and the guidance of traffic rules to make reasoning and decisions. These decisions are converted into control signals to navigate the ego car in the simulator.
+              Specifically, Analytic Process accumulates an initial memory bank used to train Heuristic Process and updates it especially when Heuristic Process encounters accidents. Heuristic Process leverages scene tokens to efficiently retrieve the most relevant historical scenarios from this memory bank, enabling rapid and informed driving decisions.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="Architecture">
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+
+        <div class="column is-four-fifths">
+          <h2 class="title">VLM instruction datasets
+          </h2>
+          <div class="hero-body">
+            <center>
+              <embed type="image/png" src="static/images/data_anno.png" width="100%" />
+            </center>
+            <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">
+              We create a dataset for instruction learning in VLM derived from DriveLM, Rank2Tell, and Carla. This dataset can be categorized into two types: multi-view and multi-frame. The multi-view annotations include a summary and elaboration, while the multi-frame annotations solely consist of a summary. Compared to multi-view annotations, the multi-frame annotations provide additional information such as exact velocity and motion trends.
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- scene encoder -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+
+        <div class="columns is-centered">
+          <h2 class="title">Scene Encoder</h2>
+
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/scenetoken.png" alt="MY ALT TEXT" width="80%" />
+            </center>
+            <h2 class="subtitle has-text-justified" style="padding-top: 1rem;">              
+              The training pipeline of our Scene Encoder is outlined as follows: (a) provides details about the input data; (b) illustrates how we form both ACT (action) and ACC (Acceleration) for the input images and update the model using contrastive loss in these two spaces; (c) presents the architecture of the Scene Encoder.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/token_case_1.jpg" alt="MY ALT TEXT" width="80%" />
+            </center>
+            <h2 class="subtitle has-text-centered">
+              Retrieval samples in the Carla closed-loop experiment.
+            </h2>
+          </div>
+
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/token_case_2.jpg" alt="MY ALT TEXT" width="80%" />
+            </center>
+            <h2 class="subtitle has-text-centered">
+              Retrieval samples in the DriveArena closed-loop experiment.
+            </h2>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End scene encoder -->
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
+
+        <div class="columns is-centered">
+          <h2 class="title">Case Studies</h2>
+
+        </div>
+        <div id="results-carousel" class="carousel results-carousel">
+     
+
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/case_1.png" alt="MY ALT TEXT" width="80%" />
+            </center>
+            <h2 class="subtitle has-text-centered">
+              A case where a vehicle suddenly cut in.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/case_2.png" alt="MY ALT TEXT" width="80%" />
+            </center>
+            <h2 class="subtitle has-text-centered">
+              A case of ``LCL''.
+            </h2>
+          </div>
+          <div class="item">
+            <!-- Your image here -->
+            <center>
+              <img src="static/images/reflection_process.png" alt="MY ALT TEXT" width="60%" />
+            </center>
+            <h2 class="subtitle has-text-centered">
+              Case study for reflection process.
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End image carousel -->
+
+
+  <!-- Videos should be placed here. -->
+
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <div style="position: relative;">
+        <button id="copyButton" style="position: absolute; top: 0; right: 0;">Copy</button>
+        <pre><code id="bibtexCode">
+          None
+      </code></pre>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var copyButton = document.getElementById("copyButton");
+
+    copyButton.addEventListener("click", function () {
+      var codeElement = document.getElementById("bibtexCode");
+      var textToCopy = codeElement.textContent;
+
+      var textarea = document.createElement("textarea");
+      textarea.value = textToCopy;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+
+      copyButton.textContent = "✓ Copied!";
+
+      setTimeout(function () {
+        copyButton.textContent = "Copy";
+      }, 2000); // Reset the button text after 2 seconds (adjust as needed)
+    });
+  </script>
+  <!--End BibTex citation -->
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p style="text-align: center;"><i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> <i class="fa-solid fa-heart fa-beat-fade" style="color: #ff8787;"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
