@@ -1,7 +1,7 @@
 
 # <img src="assets/figures/leap.png" alt="icon" style="width: 40px; height: 40px; vertical-align: middle;"> LeapVAD: A Leap in Autonomous Driving via Cognitive Perception and Dual-Process Thinking
 
-[![Custom badge](https://img.shields.io/badge/Arxiv-pdf-8A2BE2?logo=arxiv)]() [![Custom badge](https://img.shields.io/badge/Project-page-green?logo=document)]() ![GitHub license](https://img.shields.io/badge/License-Apache--2.0-red)
+[![Custom badge](https://img.shields.io/badge/Arxiv-pdf-8A2BE2?logo=arxiv)](https://arxiv.org/abs/2501.08168) [![Custom badge](https://img.shields.io/badge/Project-page-green?logo=document)](https://pjlab-adg.github.io/LeapVAD/) ![GitHub license](https://img.shields.io/badge/License-Apache--2.0-red)
 
 
 > Yukai Ma<sup>1,2</sup>, Tiantian Wei<sup>3,2</sup>, Naiting Zhong<sup>4,2</sup>, Jianbiao Mei<sup>1,2</sup>, Tao Hu<sup>5,2</sup>, Licheng Wen<sup>2</sup>, Xuemeng Yang<sup>2</sup>, Botian Shi<sup>2,†</sup>, Yong Liu<sup>1,†</sup>
@@ -22,9 +22,9 @@ The code for LeapVAD will be updated in this repository.
 
 ## 📖 News
 
-- `[2025-1-14]` The paper can be accessed at [arxiv]().
+- `[2025-1-14]` The paper can be accessed at [arxiv](https://arxiv.org/abs/2501.08168).
 
-- `[2025-1-14]` We released our project website [here]().
+- `[2025-1-14]` We released our project website [here](https://pjlab-adg.github.io/LeapVAD/).
 
 - `[2025-1-14]` Preliminary work for this job (LeapAD) can be found [here](https://github.com/PJLab-ADG/LeapAD).
 
